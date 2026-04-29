@@ -1,0 +1,13 @@
+import { Component, Input } from '@angular/core';
+import { IPerson } from '../../shared/interface/person';
+
+
+@Component({
+  selector: 'app-step3-person-table-input',
+  imports: [],
+  templateUrl: './step3-person-table-input.html',
+  styleUrl: './step3-person-table-input.css',
+})
+export class Step3PersonTableInput {
+  @Input() person: IPerson | undefined
+}
