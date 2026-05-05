@@ -9,7 +9,9 @@ import { IPerson } from './shared/interface/person';
 
 @Component({
   selector: 'app-root',
-  imports: [Step2PersonTable, 
+  imports: [
+    RouterOutlet,
+    Step2PersonTable, 
     Step3PersonTableInput, 
     Step4ForDirective,
     Step5EventBind
@@ -37,4 +39,6 @@ export class App {
     lastname: "lastname2",
     email: "lastname2@aueb.gr"
   }
+
+  doNotShowComponents: boolean = true;
 }
