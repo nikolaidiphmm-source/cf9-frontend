@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IPerson } from '../../shared/interface/person';
 import { sortBy } from 'lodash-es';
 
@@ -10,6 +10,7 @@ import { sortBy } from 'lodash-es';
 })
 export class Step8SimpleDataTable {
   @Input() data:IPerson[] | undefined;
+  @Output() personClicked = new EventEmitter<IPerson>()
 
   ngOnInit(){
     console.log("NG ON INIT 1>>>>", this.sortOrder);
@@ -32,5 +33,9 @@ export class Step8SimpleDataTable {
       this.sortOrder[sortKey] = 'asc';
       this.data = sortBy(this.data, sortKey);
     }
+  }
+
+  onPersonClicked(data: IPerson) {
+    this.personClicked.emit(data)
   }
 }
