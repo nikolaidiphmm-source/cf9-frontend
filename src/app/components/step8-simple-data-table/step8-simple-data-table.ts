@@ -9,15 +9,15 @@ import { sortBy } from 'lodash-es';
   styleUrl: './step8-simple-data-table.css',
 })
 export class Step8SimpleDataTable {
-  @Input() data:IPerson[] | undefined;
+  @Input() data: IPerson[] | undefined;
   @Output() personClicked = new EventEmitter<IPerson>()
 
   ngOnInit(){
-    console.log("NG ON INIT 1>>>>", this.sortOrder);
-    // this.sortOrder['firstname'] = 'asc';
-    // this.data = sortBy(this.data, 'firstname');
-    this.sortData('firstname');
-    console.log("NG ON INIT 1>>>>", this.sortOrder);
+    // console.log("NG ON INIT 1>>>>", this.sortOrder);
+    // // this.sortOrder['firstname'] = 'asc';
+    // // this.data = sortBy(this.data, 'firstname');
+    // this.sortData('firstname');
+    // console.log("NG ON INIT 1>>>>", this.sortOrder);
   }
 
   sortOrder = {
