@@ -6,6 +6,7 @@ import { Step6Welcome } from './components/step6-welcome/step6-welcome';
 import { Step3PersonTableInput } from './components/step3-person-table-input/step3-person-table-input';
 import { Step8SimpleDataTableShow } from './components/step8-simple-data-table-show/step8-simple-data-table-show';
 import { Step9ComponentOutput } from './components/step9-component-output/step9-component-output';
+import { Step10TemplateDrivenForms } from './components/step10-template-driven-forms/step10-template-driven-forms';
 
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
     {path: 'event-bind-example', component:Step5EventBind},
     {path: 'simple-datatable-example', component:Step8SimpleDataTableShow},
     {path: 'component-output-example', component:Step9ComponentOutput},
+    {path: 'template-driven-form-example', component:Step10TemplateDrivenForms},
     {path: 'welcome', component:Step6Welcome},
     {path: '', redirectTo:'/welcome', pathMatch: 'full'}
 ];
