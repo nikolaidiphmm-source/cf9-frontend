@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { 
   FormControl,
   FormGroup,
@@ -24,6 +24,7 @@ import { IPerson } from '../../../shared/interface/person';
   styleUrl: './person-reactive-form.css',
 })
 export class PersonReactiveForm {
+  @Output() person = new EventEmitter<IPerson>()
 
   form = new FormGroup({
     firstname: new FormControl('', Validators.required),
@@ -33,9 +34,18 @@ export class PersonReactiveForm {
 
   onSubmit(){
     console.log("OnSubmit", this.form.value);
+    if (this.form.valid) {
+      console.log("OnSubmit", this.form.value);
+      this.person.emit(this.form.value as IPerson);
+    }
   }
 
   onSetValue(){
-    console.log("Set Value");
+    // console.log("Set Value");
+    this.form.setValue({
+      firstname: "Bob",
+      lastname: "Dylan",
+      email: "bob@aueb.gr"
+    })
   }
 }

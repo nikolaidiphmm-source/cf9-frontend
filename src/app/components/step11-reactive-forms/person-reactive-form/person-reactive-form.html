@@ -1,6 +1,6 @@
 <div class="d-flex flex-column">
     <h5>New Person Form</h5>
-    <form [formGroup]="form">
+    <form [formGroup]="form" class="d-flex flex-column">
         <mat-form-field>
             <mat-label>First Name</mat-label>
             <input matInput type="text" formControlName="firstname">
@@ -16,7 +16,7 @@
          <mat-form-field>
             <mat-label>Email</mat-label>
             <input matInput type="text" formControlName="email">
-            <mat-error>Email is required</mat-error>
+            <mat-error>Email is required or invalid</mat-error>
         </mat-form-field>
     </form>
     <button
