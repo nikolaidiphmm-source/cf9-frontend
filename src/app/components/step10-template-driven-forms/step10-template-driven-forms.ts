@@ -20,6 +20,8 @@ export class Step10TemplateDrivenForms {
 
   onPerson(data: IPerson) {
     this.currentPerson = data;
-    this.persons.push(data);
+    // this.persons.push(data);
+    this.persons = [...this.persons, data];
+    console.log("Step 10", this.persons);
   }
 }
