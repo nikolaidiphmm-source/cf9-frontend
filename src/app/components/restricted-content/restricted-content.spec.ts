@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RestictedContent } from './resticted-content';
+import { RestictedContent } from './restricted-content';
 
 describe('RestictedContent', () => {
   let component: RestictedContent;
