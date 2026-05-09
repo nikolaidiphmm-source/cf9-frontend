@@ -45,9 +45,9 @@
                 <mat-form-field>
                     <mat-label>Type</mat-label>
                     <mat-select formControlName="type">
-                        <mat-option>Mobile</mat-option>
-                        <mat-option>Home</mat-option>
-                        <mat-option>Work</mat-option>
+                        <mat-option value="mobile">Mobile</mat-option>
+                        <mat-option value="home">Home</mat-option>
+                        <mat-option value="work">Work</mat-option>
                     </mat-select>
                 </mat-form-field>
 
@@ -73,6 +73,7 @@
         <button 
             mat-raised-button 
             color="primary"
+            (click)="onSubmit()"
             >
             Submit
         </button>
